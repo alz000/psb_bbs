@@ -16,7 +16,20 @@
 </nav>
 <div class="button-area-start">   
     <a class="call-us" href="#">&nbsp;</a> 
-    <a href="santri/formulir.php" class="rts-btn btn-primary">Formulir Pendaftaran</a>
+    <?php
+        // Ambil data setting_pendaftaran terbaru atau yang aktif
+        $today = date('Y-m-d');
+
+        $query = $con->query("SELECT tgl_mulai,tgl_selesai FROM setting_pendaftaran 
+                            WHERE '$today' BETWEEN tgl_mulai AND tgl_selesai
+                            LIMIT 1");
+
+        if ($query && $query->num_rows > 0) {
+            // Tampilkan tombol jika ada data yang sesuai
+            echo '<a href="santri/formulir.php" class="rts-btn btn-primary">Formulir Pendaftaran</a>';
+        }
+    ?>
+
     <a href="santri/login.php" class="rts-btn btn-primary">Login</a>
     <div class="menu-btn" id="menu-btn">
 

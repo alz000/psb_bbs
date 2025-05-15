@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2025 at 02:00 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.28
+-- Waktu pembuatan: 15 Bulan Mei 2025 pada 17.11
+-- Versi server: 10.4.27-MariaDB
+-- Versi PHP: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Struktur dari tabel `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,10 +35,10 @@ CREATE TABLE `admin` (
   `password` varchar(100) NOT NULL,
   `foto` varchar(255) NOT NULL,
   `status` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `admin`
+-- Dumping data untuk tabel `admin`
 --
 
 INSERT INTO `admin` (`id_admin`, `nama`, `level`, `username`, `password`, `foto`, `status`) VALUES
@@ -50,7 +50,7 @@ INSERT INTO `admin` (`id_admin`, `nama`, `level`, `username`, `password`, `foto`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `artikel`
+-- Struktur dari tabel `artikel`
 --
 
 CREATE TABLE `artikel` (
@@ -63,22 +63,22 @@ CREATE TABLE `artikel` (
   `posting` varchar(100) NOT NULL,
   `view` varchar(20) NOT NULL,
   `status_artikel` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `artikel`
+-- Dumping data untuk tabel `artikel`
 --
 
 INSERT INTO `artikel` (`id_artikel`, `judul`, `kategori`, `isi`, `gambar`, `tanggal`, `posting`, `view`, `status_artikel`) VALUES
 (1, 'Malam Nisfu Syaban', 'Keagamaan', '<p style=\"text-align:justify\">Malam Nisfu Sya&#39;ban merupakan salah satu malam istimewa dalam kalender Islam. Umat Muslim di seluruh dunia memanfaatkannya untuk berdoa, beribadah, dan memperbaiki hubungan dengan Allah. Namun, tanggal pasti Nisfu Sya&#39;ban sering menjadi pertanyaan, mengingat penanggalan Hijriah berbasis pada perhitungan bulan. Artikel ini akan membahas kapan Nisfu Sya&#39;ban jatuh pada tahun 2025 dan panduan lengkap untuk memanfaatkan malam penuh berkah ini.<br />\r\n<br />\r\nApa Itu Nisfu Sya&#39;ban?<br />\r\nNisfu Sya&#39;ban berasal dari kata &quot;nisfu&quot; yang berarti pertengahan dan &quot;Sya&#39;ban&quot; yang merupakan bulan kedelapan dalam kalender Hijriah. Dengan demikian, Nisfu Sya&#39;ban merujuk pada malam ke-15 bulan Sya&#39;ban. Dalam tradisi Islam, malam ini dipenuhi dengan berbagai amalan seperti doa dan istigfar.<br />\r\nPada tahun 2025, malam Nisfu Sya&#39;ban akan dimulai pada Jumat malam, 14 Februari 2025, setelah Magrib. Hari itu bertepatan dengan tanggal 15 Sya&#39;ban 1446 Hijriah. Selain penting untuk memperbanyak ibadah, malam Nisfu Sya&#39;ban juga dikenal sebagai malam pengampunan. Oleh karena itu, mengetahui kapan Nisfu Sya&#39;ban jatuh sangat membantu umat Muslim dalam mempersiapkan diri.</p>\r\n\r\n<h3 style=\"text-align:justify\">Keutamaan Malam Nisfu Sya&#39;ban</h3>\r\n\r\n<ol>\r\n	<li>\r\n	<p style=\"text-align:justify\"><strong>Pengampunan Dosa</strong><br />\r\n	Dalam sebuah hadis, disebutkan bahwa pada malam ini, Allah mengampuni dosa seluruh hamba-Nya kecuali yang syirik dan bermusuhan dengan sesama. Mengetahui kapan Nisfu Sya&#39;ban jatuh memberi kesempatan untuk bertobat dan memohon ampun kepada Allah.</p>\r\n	</li>\r\n	<li>\r\n	<p style=\"text-align:justify\"><strong>Kesempatan Memperbaiki Diri</strong><br />\r\n	Nisfu Sya&#39;ban adalah waktu untuk introspeksi. Dengan memahami kapan malam ini tiba, Anda dapat merencanakan doa dan amalan untuk meningkatkan kualitas ibadah.</p>\r\n	</li>\r\n	<li>\r\n	<p style=\"text-align:justify\"><strong>Persiapan Menyambut Ramadan</strong><br />\r\n	Nisfu Sya&#39;ban dianggap sebagai persiapan rohani menuju Ramadan. Mengetahui kapan malam ini jatuh membantu Anda memperbanyak ibadah sebelum memasuki bulan puasa.</p>\r\n	</li>\r\n	<li>\r\n	<p style=\"text-align:justify\"><strong>Peningkatan Kualitas Doa</strong><br />\r\n	Pada malam ini, umat Islam dianjurkan untuk memperbanyak doa, termasuk doa panjang umur dalam ketaatan, rezeki yang halal, dan pengampunan dosa. Mengetahui tanggalnya memungkinkan Anda merencanakan ibadah ini dengan lebih matang.</p>\r\n	</li>\r\n</ol>\r\n\r\n<h3 style=\"text-align:justify\">Amalan yang Dianjurkan di Malam Nisfu Sya&#39;ban</h3>\r\n\r\n<ol>\r\n	<li>\r\n	<p style=\"text-align:justify\"><strong>Salat Malam</strong><br />\r\n	Pada malam Nisfu Sya&#39;ban, umat Islam dianjurkan untuk memperbanyak salat malam. Hal ini dilakukan sebagai bentuk pendekatan kepada Allah. Setelah mengetahui kapan malam ini tiba, sempatkan waktu untuk melaksanakan salat tahajud.</p>\r\n	</li>\r\n	<li>\r\n	<p style=\"text-align:justify\"><strong>Membaca Al-Qur&#39;an</strong><br />\r\n	Malam ini menjadi momen yang baik untuk memperbanyak tilawah Al-Qur&#39;an. Mengetahui tanggalnya memungkinkan Anda mempersiapkan waktu khusus untuk membaca kitab suci.</p>\r\n	</li>\r\n	<li>\r\n	<p style=\"text-align:justify\"><strong>Berpuasa</strong><br />\r\n	Selain malamnya, siang Nisfu Sya&#39;ban juga diisi dengan amalan puasa sunnah. Pada tahun 2025, tanggal 14 Februari adalah kesempatan untuk melaksanakan puasa ini.</p>\r\n	</li>\r\n	<li>\r\n	<p style=\"text-align:justify\"><strong>Istigfar dan Doa</strong><br />\r\n	Malam Nisfu Sya&#39;ban adalah waktu terbaik untuk memperbanyak istigfar. Ketahui tanggalnya agar Anda tidak melewatkan kesempatan ini.</p>\r\n	</li>\r\n</ol>\r\n\r\n<h3 style=\"text-align:justify\">Bagaimana Menentukan Tanggal Nisfu Sya&#39;ban?</h3>\r\n\r\n<p style=\"text-align:justify\">Penentuan tanggal Nisfu Sya&#39;ban mengacu pada penanggalan Hijriah yang berbasis pada hilal (penampakan bulan). Di Indonesia, kalender Hijriah sering kali disesuaikan dengan pengamatan hilal oleh Kementerian Agama. Pada tahun 2025, 1 Sya&#39;ban jatuh pada 31 Januari, sehingga malam Nisfu Sya&#39;ban adalah pada Jumat malam, 14 Februari 2025.</p>\r\n\r\n<h3 style=\"text-align:justify\">Persiapkan Diri untuk Malam Nisfu Sya&#39;ban</h3>\r\n\r\n<p style=\"text-align:justify\">Mengetahui kapan Nisfu Sya&#39;ban jatuh adalah langkah awal untuk memanfaatkan malam penuh keberkahan ini. Pada tahun 2025, Nisfu Sya&#39;ban jatuh pada 14 Februari. Pastikan Anda mempersiapkan diri dengan memperbanyak ibadah, berdoa, dan bertobat. Semoga malam ini menjadi momen mendekatkan diri kepada Allah dan meraih keberkahan-Nya.</p>\r\n\r\n<p style=\"text-align:justify\">Dengan memahami malam Nisfu Sya&#39;ban, Anda tidak hanya mendapatkan pengetahuan, tetapi juga peluang untuk meningkatkan kualitas spiritual Anda. Mari jadikan malam ini sebagai momentum perbaikan diri.</p>\r\n', 'ODI4MTE3MzQzMjYwNDA.jpg', '2025-02-03', 'Alief Hidayat', '13', 'Aktif'),
 (2, 'Struktur Organisasi', 'Struktur Organisasi', '<p>Struktur Organisasi</p>\r\n', 'struk.PNG', '2025-02-03', 'Alief Hidayat', '4', 'Aktif'),
-(3, 'Visi dan Misi', 'Visi dan Misi', '<p><strong>VISI</strong><br />\r\n&quot;UNGGUL DALAM ILMU, TERAMPIL DALAM AMAL, DAN MULIA DALAM AKHLAK&quot;<br />\r\n<br />\r\n<strong>MISI</strong></p>\r\n\r\n<ol>\r\n	<li>Mendidik Peserta didik memiliki Kesadaran Ketuhanan (spiritual makrifat).</li>\r\n	<li>Mengamalkan Al Qur&rsquo;an dan Sunnah Rasulullah SAW</li>\r\n	<li>Membudayakan berkata sopan, tawadhu`, qana`ah, saling menghargai dan saling membantu</li>\r\n	<li>Meningkatkan kemauan dan kemampuan berkomunikasi secara lisan dan tulisan.</li>\r\n	<li>Melatih berbahasa Arab dan Inggris.</li>\r\n	<li>Membina Peserta didik agar menjadi manusia yang memiliki kecakapan hidup dan ketrampilan&nbsp; sosial, teknologi, informasi dan komunikasi</li>\r\n	<li>Mengembangkan potensi peserta didik berjiwa&nbsp; mandiri, beretos kerja keras, wirausaha, kompetetif dan jujur.</li>\r\n	<li>Mempersiapkan peserta didik untuk dapat lulus dalam Ujian Nasional</li>\r\n	<li>Membentuk kader persyarikatan, ummat dan bangsa yang ikhlas, peka, peduli dan bertanggungjawab terhadap kemanusiaan dan lingkungan</li>\r\n	<li>Mempersiapkan peserta didik menjadi Hafizh Al Qur&rsquo;an</li>\r\n</ol>\r\n', 'logo_ponpes.png', '2025-02-03', 'Alief Hidayat', '4', 'Aktif'),
+(3, 'Visi dan Misi', 'Visi dan Misi', '<p><strong>VISI</strong><br />\r\n&quot;UNGGUL DALAM ILMU, TERAMPIL DALAM AMAL, DAN MULIA DALAM AKHLAK&quot;<br />\r\n<br />\r\n<strong>MISI</strong></p>\r\n\r\n<ol>\r\n	<li>Mendidik Peserta didik memiliki Kesadaran Ketuhanan (spiritual makrifat).</li>\r\n	<li>Mengamalkan Al Qur&rsquo;an dan Sunnah Rasulullah SAW</li>\r\n	<li>Membudayakan berkata sopan, tawadhu`, qana`ah, saling menghargai dan saling membantu</li>\r\n	<li>Meningkatkan kemauan dan kemampuan berkomunikasi secara lisan dan tulisan.</li>\r\n	<li>Melatih berbahasa Arab dan Inggris.</li>\r\n	<li>Membina Peserta didik agar menjadi manusia yang memiliki kecakapan hidup dan ketrampilan&nbsp; sosial, teknologi, informasi dan komunikasi</li>\r\n	<li>Mengembangkan potensi peserta didik berjiwa&nbsp; mandiri, beretos kerja keras, wirausaha, kompetetif dan jujur.</li>\r\n	<li>Mempersiapkan peserta didik untuk dapat lulus dalam Ujian Nasional</li>\r\n	<li>Membentuk kader persyarikatan, ummat dan bangsa yang ikhlas, peka, peduli dan bertanggungjawab terhadap kemanusiaan dan lingkungan</li>\r\n	<li>Mempersiapkan peserta didik menjadi Hafizh Al Qur&rsquo;an</li>\r\n</ol>\r\n', 'logo_ponpes.png', '2025-02-03', 'Alief Hidayat', '5', 'Aktif'),
 (4, 'Sejarah Singkat', 'Sejarah', '<p style=\"margin-left:28px; text-align:justify\"><span style=\"font-size:12pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"color:black\"><span style=\"font-size:11.0pt\">MTs - MA Babussalam Tanah Grogot merupakan sekolah pesantren yang bertempatkan di Tanah Grogot yang berada di provinsi Kalimantan Timur. Sekolah pesantren ini menggunakan 2 kurikulum yaitu kurikulum formal (Kurikulum Merdeka) dan kurikulum diniyah. Kurikulum formal adalah kurikulum yang biasa dipakai pada sekolah pada umumnya, sedangkan kurikulum diniyah merupakan pendidikan yang hanya mengajarkan ilmu-ilmu agama islam.&nbsp;</span></span></span></span><span style=\"font-size:12pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"color:black\"><span style=\"font-size:11.0pt\">Pesantren ini juga memiliki pengajar yang terbagi menjadi 2 yaitu guru formal dan guru diniyah. Guru formal adalah guru yang mengajar pelajaran umum, sedangkan guru diniyah adalah guru mengajar yang berfokus pada pendidikan agama islam.</span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n', 'logo_ponpes.png', '2025-02-03', 'Alief Hidayat', '3', 'Aktif');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ayah`
+-- Struktur dari tabel `ayah`
 --
 
 CREATE TABLE `ayah` (
@@ -92,22 +92,24 @@ CREATE TABLE `ayah` (
   `id_pendidikan_ayah` int(11) NOT NULL,
   `id_pekerjaan_ayah` int(11) NOT NULL,
   `penghasilan_ayah` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `ayah`
+-- Dumping data untuk tabel `ayah`
 --
 
 INSERT INTO `ayah` (`id_ayah`, `nisn`, `nama_ayah`, `nik_ayah`, `tmp_ayah`, `tgl_ayah`, `alamat_ayah`, `id_pendidikan_ayah`, `id_pekerjaan_ayah`, `penghasilan_ayah`) VALUES
 (1, '6183228431', 'Wahyudi', '5315031911150001', 'Talisayan', '2025-02-06', 'Talisayan Raya', 6, 8, 2000000),
 (2, '6183228499', 'Ahmadi', '5315031911150099', 'Talisayan', '2025-02-06', 'Talisayan Raya', 6, 8, 2000000),
 (3, '7954307784 ', 'Maman', '1565324629736884', 'Talisayan', '2025-02-06', 'Talisayan Raya', 6, 8, 2000000),
-(4, '8834667251', 'Suryaman', '5572709398043500', 'Talisayan', '2025-02-06', 'Talisayan Raya', 6, 8, 2000000);
+(4, '8834667251', 'Suryaman', '5572709398043500', 'Talisayan', '2025-02-06', 'Talisayan Raya', 6, 8, 2000000),
+(5, '123', '123', '123', '123', '2025-05-15', '123', 4, 4, 123),
+(6, '43434', '123', '123', '123', '2025-05-15', '123', 3, 4, 123);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `berkas`
+-- Struktur dari tabel `berkas`
 --
 
 CREATE TABLE `berkas` (
@@ -120,10 +122,10 @@ CREATE TABLE `berkas` (
   `ktp_ibu` varchar(255) NOT NULL,
   `kartu_keluarga` varchar(255) NOT NULL,
   `kip` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `berkas`
+-- Dumping data untuk tabel `berkas`
 --
 
 INSERT INTO `berkas` (`id_berkas`, `id_pembayaran`, `tgl_berkas`, `ijazah`, `akta_lahir`, `ktp_ayah`, `ktp_ibu`, `kartu_keluarga`, `kip`) VALUES
@@ -133,16 +135,16 @@ INSERT INTO `berkas` (`id_berkas`, `id_pembayaran`, `tgl_berkas`, `ijazah`, `akt
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bidang`
+-- Struktur dari tabel `bidang`
 --
 
 CREATE TABLE `bidang` (
   `id_bidang` int(11) NOT NULL,
   `bidang` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `bidang`
+-- Dumping data untuk tabel `bidang`
 --
 
 INSERT INTO `bidang` (`id_bidang`, `bidang`) VALUES
@@ -169,7 +171,7 @@ INSERT INTO `bidang` (`id_bidang`, `bidang`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `calon_santri`
+-- Struktur dari tabel `calon_santri`
 --
 
 CREATE TABLE `calon_santri` (
@@ -200,23 +202,24 @@ CREATE TABLE `calon_santri` (
   `no_ijazah` varchar(20) NOT NULL,
   `lama_belajar` varchar(5) NOT NULL,
   `status_santri` varchar(100) DEFAULT NULL,
-  `password_santri` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `password_santri` varchar(100) DEFAULT NULL,
+  `gelombang_id` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `calon_santri`
+-- Dumping data untuk tabel `calon_santri`
 --
 
-INSERT INTO `calon_santri` (`nisn`, `tgl_santri`, `jenjang`, `nama_lengkap`, `nama_panggilan`, `jk`, `tmp`, `tgl`, `anak_ke`, `jumlah_saudara`, `tinggi`, `berat`, `id_darah`, `riwayat_penyakit`, `provinsi`, `kabupaten`, `kecamatan`, `desa`, `alamat`, `notelp`, `tempat_tinggal`, `jarak`, `sekolah_asal`, `tgl_ijazah`, `no_ijazah`, `lama_belajar`, `status_santri`, `password_santri`) VALUES
-('6183228431', '2025-02-06', 'Madrasah Tsanawiyah (MTS)', 'Titi Kusmiati', 'Titi', 'Perempuan', 'Banjarmasin', '2025-02-20', 3, 2, 122, 33, 1, 'Magh, Asma', '64', '64.03', '64.03.02', '64.03.02.2003', 'Talisayan Raya', '0895329695138', 'Orang Tua', '3', 'SD Negeri 2 Grogot', '2025-02-06', '4817954983', '6', 'Pending', '4360273319'),
-('6183228499', '2025-02-06', 'Madrasah Aliyah (MA)', 'Kusmiati', 'Mia', 'Perempuan', 'Banjarmasin', '2025-02-20', 3, 2, 122, 33, 1, 'Magh, Asma', '64', '64.01', '64.03.02', '64.03.02.2003', 'Talisayan Raya', '0895329695138', 'Orang Tua', '3', 'SD Negeri 2 Grogot', '2025-02-06', '4817954983', '6', 'Lulus, Segera Daftar Ulang', '4360273399'),
-('7954307784 ', '2025-02-06', 'Madrasah Tsanawiyah (MTS)', 'Dwi Wriyanta', 'Dwi', 'Laki-Laki', 'Banjarmasin', '2025-02-20', 3, 2, 122, 33, 1, 'Magh, Asma', '64', '64.08', '64.03.02', '64.03.02.2003', 'Talisayan Raya', '0895329695138', 'Orang Tua', '3', 'SD Negeri 2 Grogot', '2025-02-06', '4817954983', '6', 'Tidak Lulus', '4360273319'),
-('8834667251 ', '2025-02-06', 'Madrasah Tsanawiyah (MTS)', 'Kiki Amelia', 'Amel', 'Perempuan', 'Banjarmasin', '2025-02-20', 3, 2, 122, 33, 1, 'Magh, Asma', '64', '64.03', '64.03.02', '64.03.02.2003', 'Talisayan Raya', '0895329695138', 'Orang Tua', '3', 'SD Negeri 2 Grogot', '2025-02-06', '4817954983', '6', 'Pending', '4360273319');
+INSERT INTO `calon_santri` (`nisn`, `tgl_santri`, `jenjang`, `nama_lengkap`, `nama_panggilan`, `jk`, `tmp`, `tgl`, `anak_ke`, `jumlah_saudara`, `tinggi`, `berat`, `id_darah`, `riwayat_penyakit`, `provinsi`, `kabupaten`, `kecamatan`, `desa`, `alamat`, `notelp`, `tempat_tinggal`, `jarak`, `sekolah_asal`, `tgl_ijazah`, `no_ijazah`, `lama_belajar`, `status_santri`, `password_santri`, `gelombang_id`) VALUES
+('6183228431', '2025-02-06', 'Madrasah Tsanawiyah (MTS)', 'Titi Kusmiati', 'Titi', 'Perempuan', 'Banjarmasin', '2025-02-20', 3, 2, 122, 33, 1, 'Magh, Asma', '64', '64.03', '64.03.02', '64.03.02.2003', 'Talisayan Raya', '0895329695138', 'Orang Tua', '3', 'SD Negeri 2 Grogot', '2025-02-06', '4817954983', '6', 'Pending', '4360273319', '2'),
+('6183228499', '2025-02-06', 'Madrasah Aliyah (MA)', 'Kusmiati', 'Mia', 'Perempuan', 'Banjarmasin', '2025-02-20', 3, 2, 122, 33, 1, 'Magh, Asma', '64', '64.01', '64.03.02', '64.03.02.2003', 'Talisayan Raya', '0895329695138', 'Orang Tua', '3', 'SD Negeri 2 Grogot', '2025-02-06', '4817954983', '6', 'Lulus, Segera Daftar Ulang', '4360273399', '2'),
+('7954307784 ', '2025-02-06', 'Madrasah Tsanawiyah (MTS)', 'Dwi Wriyanta', 'Dwi', 'Laki-Laki', 'Banjarmasin', '2025-02-20', 3, 2, 122, 33, 1, 'Magh, Asma', '64', '64.08', '64.03.02', '64.03.02.2003', 'Talisayan Raya', '0895329695138', 'Orang Tua', '3', 'SD Negeri 2 Grogot', '2025-02-06', '4817954983', '6', 'Tidak Lulus', '4360273319', '2'),
+('8834667251 ', '2025-02-06', 'Madrasah Tsanawiyah (MTS)', 'Kiki Amelia', 'Amel', 'Perempuan', 'Banjarmasin', '2025-02-20', 3, 2, 122, 33, 1, 'Magh, Asma', '64', '64.03', '64.03.02', '64.03.02.2003', 'Talisayan Raya', '0895329695138', 'Orang Tua', '3', 'SD Negeri 2 Grogot', '2025-02-06', '4817954983', '6', 'Pending', '4360273319', '2');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `chat`
+-- Struktur dari tabel `chat`
 --
 
 CREATE TABLE `chat` (
@@ -224,10 +227,10 @@ CREATE TABLE `chat` (
   `nama_user` varchar(100) NOT NULL,
   `pesan` text NOT NULL,
   `waktu` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `chat`
+-- Dumping data untuk tabel `chat`
 --
 
 INSERT INTO `chat` (`id_chat`, `nama_user`, `pesan`, `waktu`) VALUES
@@ -237,16 +240,16 @@ INSERT INTO `chat` (`id_chat`, `nama_user`, `pesan`, `waktu`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `darah`
+-- Struktur dari tabel `darah`
 --
 
 CREATE TABLE `darah` (
   `id_darah` int(11) NOT NULL,
   `darah` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `darah`
+-- Dumping data untuk tabel `darah`
 --
 
 INSERT INTO `darah` (`id_darah`, `darah`) VALUES
@@ -266,7 +269,7 @@ INSERT INTO `darah` (`id_darah`, `darah`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ibu`
+-- Struktur dari tabel `ibu`
 --
 
 CREATE TABLE `ibu` (
@@ -280,22 +283,24 @@ CREATE TABLE `ibu` (
   `id_pendidikan_ibu` int(11) NOT NULL,
   `id_pekerjaan_ibu` int(11) NOT NULL,
   `penghasilan_ibu` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `ibu`
+-- Dumping data untuk tabel `ibu`
 --
 
 INSERT INTO `ibu` (`id_ibu`, `nisn`, `nama_ibu`, `nik_ibu`, `tmp_ibu`, `tgl_ibu`, `alamat_ibu`, `id_pendidikan_ibu`, `id_pekerjaan_ibu`, `penghasilan_ibu`) VALUES
 (1, '6183228431', 'Asyiah', '5206085405880001', 'Talisayan', '2025-02-06', 'Talisayan Raya', 6, 8, 2000000),
 (2, '6183228499', 'Zahrah', '5206085405880097', 'Talisayan', '2025-02-06', 'Talisayan Raya', 6, 8, 2000000),
 (3, '7954307784', 'Zaleha', '8121220152809513', 'Talisayan', '2025-02-06', 'Talisayan Raya', 6, 8, 2000000),
-(4, '8834667251', 'Khadijah', '4219017133912778', 'Talisayan', '2025-02-06', 'Talisayan Raya', 6, 8, 2000000);
+(4, '8834667251', 'Khadijah', '4219017133912778', 'Talisayan', '2025-02-06', 'Talisayan Raya', 6, 8, 2000000),
+(5, '123', '123', '123', '123', '2025-05-15', '123', 5, 3, 123),
+(6, '43434', '123', '123', '123', '2025-05-15', '123', 5, 4, 123);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori`
+-- Struktur dari tabel `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -303,10 +308,10 @@ CREATE TABLE `kategori` (
   `kategori` varchar(100) NOT NULL,
   `alias` varchar(100) NOT NULL,
   `s_kategori` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `kategori`
+-- Dumping data untuk tabel `kategori`
 --
 
 INSERT INTO `kategori` (`id_kategori`, `kategori`, `alias`, `s_kategori`) VALUES
@@ -319,7 +324,7 @@ INSERT INTO `kategori` (`id_kategori`, `kategori`, `alias`, `s_kategori`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `meta`
+-- Struktur dari tabel `meta`
 --
 
 CREATE TABLE `meta` (
@@ -331,10 +336,10 @@ CREATE TABLE `meta` (
   `logo` varchar(255) DEFAULT NULL,
   `pimpinan` varchar(255) DEFAULT NULL,
   `singkat` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `meta`
+-- Dumping data untuk tabel `meta`
 --
 
 INSERT INTO `meta` (`id_meta`, `instansi`, `telp`, `email`, `alamat`, `logo`, `pimpinan`, `singkat`) VALUES
@@ -343,16 +348,16 @@ INSERT INTO `meta` (`id_meta`, `instansi`, `telp`, `email`, `alamat`, `logo`, `p
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pekerjaan`
+-- Struktur dari tabel `pekerjaan`
 --
 
 CREATE TABLE `pekerjaan` (
   `id_pekerjaan` int(11) NOT NULL,
   `pekerjaan` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `pekerjaan`
+-- Dumping data untuk tabel `pekerjaan`
 --
 
 INSERT INTO `pekerjaan` (`id_pekerjaan`, `pekerjaan`) VALUES
@@ -370,7 +375,7 @@ INSERT INTO `pekerjaan` (`id_pekerjaan`, `pekerjaan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pembayaran`
+-- Struktur dari tabel `pembayaran`
 --
 
 CREATE TABLE `pembayaran` (
@@ -380,10 +385,10 @@ CREATE TABLE `pembayaran` (
   `jumlah` int(11) NOT NULL,
   `nama_admin` varchar(100) DEFAULT NULL,
   `bukti` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `pembayaran`
+-- Dumping data untuk tabel `pembayaran`
 --
 
 INSERT INTO `pembayaran` (`id_pembayaran`, `nisn`, `tgl_bayar`, `jumlah`, `nama_admin`, `bukti`) VALUES
@@ -393,7 +398,7 @@ INSERT INTO `pembayaran` (`id_pembayaran`, `nisn`, `tgl_bayar`, `jumlah`, `nama_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pendidik`
+-- Struktur dari tabel `pendidik`
 --
 
 CREATE TABLE `pendidik` (
@@ -405,10 +410,10 @@ CREATE TABLE `pendidik` (
   `tgl_pendidik` date NOT NULL,
   `alamat_pendidik` text NOT NULL,
   `notelp_pendidik` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `pendidik`
+-- Dumping data untuk tabel `pendidik`
 --
 
 INSERT INTO `pendidik` (`id_pendidik`, `nik_pendidik`, `nama_pendidik`, `jk_pendidik`, `tmp_pendidik`, `tgl_pendidik`, `alamat_pendidik`, `notelp_pendidik`) VALUES
@@ -446,16 +451,16 @@ INSERT INTO `pendidik` (`id_pendidik`, `nik_pendidik`, `nama_pendidik`, `jk_pend
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pendidikan`
+-- Struktur dari tabel `pendidikan`
 --
 
 CREATE TABLE `pendidikan` (
   `id_pendidikan` int(11) NOT NULL,
   `pendidikan` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `pendidikan`
+-- Dumping data untuk tabel `pendidikan`
 --
 
 INSERT INTO `pendidikan` (`id_pendidikan`, `pendidikan`) VALUES
@@ -477,17 +482,17 @@ INSERT INTO `pendidikan` (`id_pendidikan`, `pendidikan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pendidik_detail`
+-- Struktur dari tabel `pendidik_detail`
 --
 
 CREATE TABLE `pendidik_detail` (
   `id_pendidik_detail` int(11) NOT NULL,
   `id_pendidik` int(11) NOT NULL,
   `id_bidang` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `pendidik_detail`
+-- Dumping data untuk tabel `pendidik_detail`
 --
 
 INSERT INTO `pendidik_detail` (`id_pendidik_detail`, `id_pendidik`, `id_bidang`) VALUES
@@ -553,16 +558,16 @@ INSERT INTO `pendidik_detail` (`id_pendidik_detail`, `id_pendidik`, `id_bidang`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ruangan`
+-- Struktur dari tabel `ruangan`
 --
 
 CREATE TABLE `ruangan` (
   `id_ruangan` int(11) NOT NULL,
   `ruangan` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `ruangan`
+-- Dumping data untuk tabel `ruangan`
 --
 
 INSERT INTO `ruangan` (`id_ruangan`, `ruangan`) VALUES
@@ -572,7 +577,30 @@ INSERT INTO `ruangan` (`id_ruangan`, `ruangan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tes_masuk`
+-- Struktur dari tabel `setting_pendaftaran`
+--
+
+CREATE TABLE `setting_pendaftaran` (
+  `id` int(10) NOT NULL,
+  `gelombang` varchar(20) NOT NULL,
+  `tingkat` varchar(50) NOT NULL,
+  `kuota` varchar(10) NOT NULL,
+  `tgl_mulai` date NOT NULL,
+  `tgl_selesai` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `setting_pendaftaran`
+--
+
+INSERT INTO `setting_pendaftaran` (`id`, `gelombang`, `tingkat`, `kuota`, `tgl_mulai`, `tgl_selesai`) VALUES
+(2, 'Gelombang I', 'Madrasah Aliyah (MA)', '5', '2025-05-13', '2025-05-15'),
+(3, 'Gelombang I', 'Madrasah Tsanawiyah (MTS)', '1', '2025-05-15', '2025-05-15');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tes_masuk`
 --
 
 CREATE TABLE `tes_masuk` (
@@ -588,10 +616,10 @@ CREATE TABLE `tes_masuk` (
   `keterangan` varchar(100) DEFAULT NULL,
   `penguji_satu` varchar(100) NOT NULL,
   `penguji_dua` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tes_masuk`
+-- Dumping data untuk tabel `tes_masuk`
 --
 
 INSERT INTO `tes_masuk` (`id_tes_masuk`, `nisn`, `tgl_tes`, `jam_tes`, `ruangan_tes`, `btq`, `pengetahuan_umum`, `total_nilai`, `grade`, `keterangan`, `penguji_satu`, `penguji_dua`) VALUES
@@ -601,16 +629,16 @@ INSERT INTO `tes_masuk` (`id_tes_masuk`, `nisn`, `tgl_tes`, `jam_tes`, `ruangan_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wilayah_2022`
+-- Struktur dari tabel `wilayah_2022`
 --
 
 CREATE TABLE `wilayah_2022` (
   `kode` varchar(13) NOT NULL,
   `nama` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `wilayah_2022`
+-- Dumping data untuk tabel `wilayah_2022`
 --
 
 INSERT INTO `wilayah_2022` (`kode`, `nama`) VALUES
@@ -91956,19 +91984,19 @@ INSERT INTO `wilayah_2022` (`kode`, `nama`) VALUES
 --
 
 --
--- Indexes for table `admin`
+-- Indeks untuk tabel `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id_admin`);
 
 --
--- Indexes for table `artikel`
+-- Indeks untuk tabel `artikel`
 --
 ALTER TABLE `artikel`
   ADD PRIMARY KEY (`id_artikel`);
 
 --
--- Indexes for table `ayah`
+-- Indeks untuk tabel `ayah`
 --
 ALTER TABLE `ayah`
   ADD PRIMARY KEY (`id_ayah`),
@@ -91977,38 +92005,38 @@ ALTER TABLE `ayah`
   ADD KEY `nisn` (`nisn`);
 
 --
--- Indexes for table `berkas`
+-- Indeks untuk tabel `berkas`
 --
 ALTER TABLE `berkas`
   ADD PRIMARY KEY (`id_berkas`);
 
 --
--- Indexes for table `bidang`
+-- Indeks untuk tabel `bidang`
 --
 ALTER TABLE `bidang`
   ADD PRIMARY KEY (`id_bidang`);
 
 --
--- Indexes for table `calon_santri`
+-- Indeks untuk tabel `calon_santri`
 --
 ALTER TABLE `calon_santri`
   ADD PRIMARY KEY (`nisn`),
   ADD KEY `id_darah` (`id_darah`);
 
 --
--- Indexes for table `chat`
+-- Indeks untuk tabel `chat`
 --
 ALTER TABLE `chat`
   ADD PRIMARY KEY (`id_chat`);
 
 --
--- Indexes for table `darah`
+-- Indeks untuk tabel `darah`
 --
 ALTER TABLE `darah`
   ADD PRIMARY KEY (`id_darah`);
 
 --
--- Indexes for table `ibu`
+-- Indeks untuk tabel `ibu`
 --
 ALTER TABLE `ibu`
   ADD PRIMARY KEY (`id_ibu`),
@@ -92017,161 +92045,173 @@ ALTER TABLE `ibu`
   ADD KEY `nisn` (`nisn`);
 
 --
--- Indexes for table `kategori`
+-- Indeks untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id_kategori`);
 
 --
--- Indexes for table `meta`
+-- Indeks untuk tabel `meta`
 --
 ALTER TABLE `meta`
   ADD PRIMARY KEY (`id_meta`);
 
 --
--- Indexes for table `pekerjaan`
+-- Indeks untuk tabel `pekerjaan`
 --
 ALTER TABLE `pekerjaan`
   ADD PRIMARY KEY (`id_pekerjaan`);
 
 --
--- Indexes for table `pembayaran`
+-- Indeks untuk tabel `pembayaran`
 --
 ALTER TABLE `pembayaran`
   ADD PRIMARY KEY (`id_pembayaran`);
 
 --
--- Indexes for table `pendidik`
+-- Indeks untuk tabel `pendidik`
 --
 ALTER TABLE `pendidik`
   ADD PRIMARY KEY (`id_pendidik`);
 
 --
--- Indexes for table `pendidikan`
+-- Indeks untuk tabel `pendidikan`
 --
 ALTER TABLE `pendidikan`
   ADD PRIMARY KEY (`id_pendidikan`);
 
 --
--- Indexes for table `pendidik_detail`
+-- Indeks untuk tabel `pendidik_detail`
 --
 ALTER TABLE `pendidik_detail`
   ADD PRIMARY KEY (`id_pendidik_detail`);
 
 --
--- Indexes for table `ruangan`
+-- Indeks untuk tabel `ruangan`
 --
 ALTER TABLE `ruangan`
   ADD PRIMARY KEY (`id_ruangan`);
 
 --
--- Indexes for table `tes_masuk`
+-- Indeks untuk tabel `setting_pendaftaran`
+--
+ALTER TABLE `setting_pendaftaran`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `tes_masuk`
 --
 ALTER TABLE `tes_masuk`
   ADD PRIMARY KEY (`id_tes_masuk`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `artikel`
+-- AUTO_INCREMENT untuk tabel `artikel`
 --
 ALTER TABLE `artikel`
   MODIFY `id_artikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `ayah`
+-- AUTO_INCREMENT untuk tabel `ayah`
 --
 ALTER TABLE `ayah`
-  MODIFY `id_ayah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_ayah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `berkas`
+-- AUTO_INCREMENT untuk tabel `berkas`
 --
 ALTER TABLE `berkas`
   MODIFY `id_berkas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `bidang`
+-- AUTO_INCREMENT untuk tabel `bidang`
 --
 ALTER TABLE `bidang`
   MODIFY `id_bidang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT for table `chat`
+-- AUTO_INCREMENT untuk tabel `chat`
 --
 ALTER TABLE `chat`
   MODIFY `id_chat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `darah`
+-- AUTO_INCREMENT untuk tabel `darah`
 --
 ALTER TABLE `darah`
   MODIFY `id_darah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT for table `ibu`
+-- AUTO_INCREMENT untuk tabel `ibu`
 --
 ALTER TABLE `ibu`
-  MODIFY `id_ibu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_ibu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `kategori`
+-- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
   MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `meta`
+-- AUTO_INCREMENT untuk tabel `meta`
 --
 ALTER TABLE `meta`
   MODIFY `id_meta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `pekerjaan`
+-- AUTO_INCREMENT untuk tabel `pekerjaan`
 --
 ALTER TABLE `pekerjaan`
   MODIFY `id_pekerjaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `pembayaran`
+-- AUTO_INCREMENT untuk tabel `pembayaran`
 --
 ALTER TABLE `pembayaran`
   MODIFY `id_pembayaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `pendidik`
+-- AUTO_INCREMENT untuk tabel `pendidik`
 --
 ALTER TABLE `pendidik`
   MODIFY `id_pendidik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
--- AUTO_INCREMENT for table `pendidikan`
+-- AUTO_INCREMENT untuk tabel `pendidikan`
 --
 ALTER TABLE `pendidikan`
   MODIFY `id_pendidikan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT for table `pendidik_detail`
+-- AUTO_INCREMENT untuk tabel `pendidik_detail`
 --
 ALTER TABLE `pendidik_detail`
   MODIFY `id_pendidik_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
--- AUTO_INCREMENT for table `ruangan`
+-- AUTO_INCREMENT untuk tabel `ruangan`
 --
 ALTER TABLE `ruangan`
   MODIFY `id_ruangan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tes_masuk`
+-- AUTO_INCREMENT untuk tabel `setting_pendaftaran`
+--
+ALTER TABLE `setting_pendaftaran`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT untuk tabel `tes_masuk`
 --
 ALTER TABLE `tes_masuk`
   MODIFY `id_tes_masuk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;

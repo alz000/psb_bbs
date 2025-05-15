@@ -206,6 +206,14 @@ if ($_SESSION['Admin'] || $_SESSION['Pimpinan']) {
                     if ($aksi == "tambah") { include "page/admin/tambah.php"; }  
                     if ($aksi == "ubah") { include "page/admin/ubah.php"; }   
                     if ($aksi == "hapus") { include "page/admin/hapus.php"; }  
+                }
+                
+                if ($page == "setting_pendaftaran") 
+                {
+                    if ($aksi == "") { include "page/setting_pendaftaran/setting_pendaftaran.php"; }
+                    if ($aksi == "tambah") { include "page/setting_pendaftaran/tambah.php"; }  
+                    if ($aksi == "ubah") { include "page/setting_pendaftaran/ubah.php"; }   
+                    if ($aksi == "hapus") { include "page/setting_pendaftaran/hapus.php"; }  
                 }      
 
                 if ($page == "ruangan") 

@@ -57,6 +57,11 @@
                             </a>
                         </li> 
                         <li class="side-nav-item">
+                            <a href="?page=setting_pendaftaran" class="side-nav-link">
+                                <span class="menu-text">Pengaturan Pendaftaran</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
                             <a href="?page=darah" class="side-nav-link">
                                 <span class="menu-text">Golongan Darah</span>
                             </a>

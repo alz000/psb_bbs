@@ -429,6 +429,7 @@ include '../admin/inc/koneksi.php';
 
                     <?php
                         if (isset($_POST['tambah'])) {
+                        // data
                             $jenjang = $_POST['jenjang'];
                             $tgl_santri = $_POST['tgl_santri'];
                             $nisn = $_POST['nisn'];
@@ -478,11 +479,11 @@ include '../admin/inc/koneksi.php';
                             $nisn = $con->real_escape_string($nisn);
                             $nama_lengkap = $con->real_escape_string($nama_lengkap);
                             $notelp = $con->real_escape_string($notelp);
-
+                        // End Data
                             $cek_query = "SELECT COUNT(*) AS jumlah FROM calon_santri WHERE nisn = '$nisn'";
                             $cek_result = $con->query($cek_query);
                             $cek_data = $cek_result->fetch_assoc();
-
+                       
                             if ($cek_data['jumlah'] > 0) {
                                 echo "<script>
                                         Swal.fire({
@@ -493,7 +494,67 @@ include '../admin/inc/koneksi.php';
                                         });
                                       </script>";
                             } else { 
-                                $query = "INSERT INTO calon_santri (jenjang,tgl_santri, nisn, nama_lengkap, nama_panggilan, jk, tmp, tgl, anak_ke, jumlah_saudara, tinggi, berat, id_darah, riwayat_penyakit, provinsi, kabupaten, kecamatan, desa, alamat, notelp, tempat_tinggal, jarak, sekolah_asal, tgl_ijazah, no_ijazah, lama_belajar, status_santri, password_santri) VALUES ('$jenjang','$tgl_santri', '$nisn', '$nama_lengkap', '$nama_panggilan', '$jk', '$tmp', '$tgl', '$anak_ke', '$jumlah_saudara', '$tinggi', '$berat', '$id_darah', '$riwayat_penyakit','$provinsi','$kabupaten','$kecamatan','$desa', '$alamat', '$notelp', '$tempat_tinggal', '$jarak', '$sekolah_asal', '$tgl_ijazah', '$no_ijazah', '$lama_belajar','Pending', '$password_santri')";
+                                $today = date('Y-m-d');
+
+                                $cekgelombang = $con->query("SELECT tgl_mulai, tgl_selesai FROM setting_pendaftaran 
+                                                            WHERE '$today' BETWEEN tgl_mulai AND tgl_selesai 
+                                                            AND tingkat = '$jenjang' 
+                                                            LIMIT 1");
+
+                                if ($cekgelombang && $cekgelombang->num_rows > 0) {
+
+                                    // Ambil data setting_pendaftaran yang aktif
+                                    $ceksettingkuota_result = $con->query("SELECT id, kuota FROM setting_pendaftaran 
+                                                                        WHERE '$today' BETWEEN tgl_mulai AND tgl_selesai 
+                                                                        AND tingkat = '$jenjang' 
+                                                                        LIMIT 1");
+
+                                    $ceksettingkuota = $ceksettingkuota_result->fetch_assoc();
+                                    $gelombang_id = $ceksettingkuota['id'];
+                                    $kuota = $ceksettingkuota['kuota'];
+
+                                    // Hitung jumlah pendaftar pada gelombang ini
+                                    $cek_pendaftar = "SELECT COUNT(*) AS jumlah FROM calon_santri WHERE gelombang_id = '$gelombang_id'";
+                                    $cek_result_cek_pendaftar = $con->query($cek_pendaftar);
+                                    $hitung = $cek_result_cek_pendaftar->fetch_assoc();
+
+                                    if ($hitung['jumlah'] < $kuota) {
+                                        $query = "INSERT INTO calon_santri (
+                                                    jenjang, tgl_santri, nisn, nama_lengkap, nama_panggilan, jk, tmp, tgl, 
+                                                    anak_ke, jumlah_saudara, tinggi, berat, id_darah, riwayat_penyakit, 
+                                                    provinsi, kabupaten, kecamatan, desa, alamat, notelp, tempat_tinggal, 
+                                                    jarak, sekolah_asal, tgl_ijazah, no_ijazah, lama_belajar, 
+                                                    status_santri, password_santri, gelombang_id
+                                                ) 
+                                                VALUES (
+                                                    '$jenjang', '$tgl_santri', '$nisn', '$nama_lengkap', '$nama_panggilan', '$jk', '$tmp', '$tgl', 
+                                                    '$anak_ke', '$jumlah_saudara', '$tinggi', '$berat', '$id_darah', '$riwayat_penyakit', 
+                                                    '$provinsi', '$kabupaten', '$kecamatan', '$desa', '$alamat', '$notelp', '$tempat_tinggal', 
+                                                    '$jarak', '$sekolah_asal', '$tgl_ijazah', '$no_ijazah', '$lama_belajar', 
+                                                    'Pending', '$password_santri', '$gelombang_id'
+                                                )";
+                                    }else{
+                                         echo "<script>
+                                        Swal.fire({
+                                            icon: 'warning',
+                                            title: 'Peringatan!',
+                                            text: 'Kuota Penuh.',
+                                            confirmButtonText: 'OK'
+                                        });
+                                      </script>";
+                                    }
+                                }else{
+                                     echo "<script>
+                                        Swal.fire({
+                                            icon: 'warning',
+                                            title: 'Peringatan!',
+                                            text: 'Pendaftaran Untuk $jenjang Belum Dibuka.',
+                                            confirmButtonText: 'OK'
+                                        });
+                                      </script>";
+                                }
+
+                               
 
                                 if ($con->query($query) === TRUE) {
                                     $query_ayah = "INSERT INTO ayah (nisn, nama_ayah, nik_ayah, tmp_ayah, tgl_ayah, alamat_ayah, id_pendidikan_ayah, id_pekerjaan_ayah, penghasilan_ayah) VALUES ('$nisn', '$nama_ayah', '$nik_ayah', '$tmp_ayah', '$tgl_ayah', '$alamat_ayah', '$id_pendidikan_ayah', '$id_pekerjaan_ayah', '$penghasilan_ayah')";
