@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 05, 2025 at 11:00 PM
+-- Generation Time: May 15, 2025 at 10:52 AM
 -- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- PHP Version: 7.4.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -200,18 +200,40 @@ CREATE TABLE `calon_santri` (
   `no_ijazah` varchar(20) NOT NULL,
   `lama_belajar` varchar(5) NOT NULL,
   `status_santri` varchar(100) DEFAULT NULL,
-  `password_santri` varchar(100) DEFAULT NULL
+  `password_santri` varchar(100) DEFAULT NULL,
+  `gelombang_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `calon_santri`
 --
 
-INSERT INTO `calon_santri` (`nisn`, `tgl_santri`, `jenjang`, `nama_lengkap`, `nama_panggilan`, `jk`, `tmp`, `tgl`, `anak_ke`, `jumlah_saudara`, `tinggi`, `berat`, `id_darah`, `riwayat_penyakit`, `provinsi`, `kabupaten`, `kecamatan`, `desa`, `alamat`, `notelp`, `tempat_tinggal`, `jarak`, `sekolah_asal`, `tgl_ijazah`, `no_ijazah`, `lama_belajar`, `status_santri`, `password_santri`) VALUES
-('6183228431', '2025-02-06', 'Madrasah Tsanawiyah (MTS)', 'Titi Kusmiati', 'Titi', 'Perempuan', 'Banjarmasin', '2025-02-20', 3, 2, 122, 33, 1, 'Magh, Asma', '64', '64.03', '64.03.02', '64.03.02.2003', 'Talisayan Raya', '0895329695138', 'Orang Tua', '3', 'SD Negeri 2 Grogot', '2025-02-06', '4817954983', '6', 'Pending', '4360273319'),
-('6183228499', '2025-02-06', 'Madrasah Aliyah (MA)', 'Kusmiati', 'Mia', 'Perempuan', 'Banjarmasin', '2025-02-20', 3, 2, 122, 33, 1, 'Magh, Asma', '64', '64.01', '64.03.02', '64.03.02.2003', 'Talisayan Raya', '0895329695138', 'Orang Tua', '3', 'SD Negeri 2 Grogot', '2025-02-06', '4817954983', '6', 'Lulus, Segera Daftar Ulang', '4360273399'),
-('7954307784 ', '2025-02-06', 'Madrasah Tsanawiyah (MTS)', 'Dwi Wriyanta', 'Dwi', 'Laki-Laki', 'Banjarmasin', '2025-02-20', 3, 2, 122, 33, 1, 'Magh, Asma', '64', '64.08', '64.03.02', '64.03.02.2003', 'Talisayan Raya', '0895329695138', 'Orang Tua', '3', 'SD Negeri 2 Grogot', '2025-02-06', '4817954983', '6', 'Lulus, Segera Daftar Ulang', '4360273319'),
-('8834667251 ', '2025-02-06', 'Madrasah Tsanawiyah (MTS)', 'Kiki Amelia', 'Amel', 'Perempuan', 'Banjarmasin', '2025-02-20', 3, 2, 122, 33, 1, 'Magh, Asma', '64', '64.03', '64.03.02', '64.03.02.2003', 'Talisayan Raya', '0895329695138', 'Orang Tua', '3', 'SD Negeri 2 Grogot', '2025-02-06', '4817954983', '6', 'Pending', '4360273319');
+INSERT INTO `calon_santri` (`nisn`, `tgl_santri`, `jenjang`, `nama_lengkap`, `nama_panggilan`, `jk`, `tmp`, `tgl`, `anak_ke`, `jumlah_saudara`, `tinggi`, `berat`, `id_darah`, `riwayat_penyakit`, `provinsi`, `kabupaten`, `kecamatan`, `desa`, `alamat`, `notelp`, `tempat_tinggal`, `jarak`, `sekolah_asal`, `tgl_ijazah`, `no_ijazah`, `lama_belajar`, `status_santri`, `password_santri`, `gelombang_id`) VALUES
+('6183228431', '2025-02-06', 'Madrasah Tsanawiyah (MTS)', 'Titi Kusmiati', 'Titi', 'Perempuan', 'Banjarmasin', '2025-02-20', 3, 2, 122, 33, 1, 'Magh, Asma', '64', '64.03', '64.03.02', '64.03.02.2003', 'Talisayan Raya', '0895329695138', 'Orang Tua', '3', 'SD Negeri 2 Grogot', '2025-02-06', '4817954983', '6', 'Pending', '4360273319', NULL),
+('6183228499', '2025-02-06', 'Madrasah Aliyah (MA)', 'Kusmiati', 'Mia', 'Perempuan', 'Banjarmasin', '2025-02-20', 3, 2, 122, 33, 1, 'Magh, Asma', '64', '64.01', '64.03.02', '64.03.02.2003', 'Talisayan Raya', '0895329695138', 'Orang Tua', '3', 'SD Negeri 2 Grogot', '2025-02-06', '4817954983', '6', 'Lulus, Segera Daftar Ulang', '4360273399', NULL),
+('7954307784 ', '2025-02-06', 'Madrasah Tsanawiyah (MTS)', 'Dwi Wriyanta', 'Dwi', 'Laki-Laki', 'Banjarmasin', '2025-02-20', 3, 2, 122, 33, 1, 'Magh, Asma', '64', '64.08', '64.03.02', '64.03.02.2003', 'Talisayan Raya', '0895329695138', 'Orang Tua', '3', 'SD Negeri 2 Grogot', '2025-02-06', '4817954983', '6', 'Tidak Lulus', '4360273319', NULL),
+('8834667251 ', '2025-02-06', 'Madrasah Tsanawiyah (MTS)', 'Kiki Amelia', 'Amel', 'Perempuan', 'Banjarmasin', '2025-02-20', 3, 2, 122, 33, 1, 'Magh, Asma', '64', '64.03', '64.03.02', '64.03.02.2003', 'Talisayan Raya', '0895329695138', 'Orang Tua', '3', 'SD Negeri 2 Grogot', '2025-02-06', '4817954983', '6', 'Pending', '4360273319', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chat`
+--
+
+CREATE TABLE `chat` (
+  `id_chat` int(11) NOT NULL,
+  `nama_user` varchar(100) NOT NULL,
+  `pesan` text NOT NULL,
+  `waktu` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `chat`
+--
+
+INSERT INTO `chat` (`id_chat`, `nama_user`, `pesan`, `waktu`) VALUES
+(1, 'tes', 'tes', '2025-05-12 06:54:36'),
+(2, 'aa', 'aa', '2025-05-12 07:45:48');
 
 -- --------------------------------------------------------
 
@@ -91972,7 +91994,14 @@ ALTER TABLE `bidang`
 --
 ALTER TABLE `calon_santri`
   ADD PRIMARY KEY (`nisn`),
-  ADD KEY `id_darah` (`id_darah`);
+  ADD KEY `id_darah` (`id_darah`),
+  ADD KEY `gelombang_id` (`gelombang_id`);
+
+--
+-- Indexes for table `chat`
+--
+ALTER TABLE `chat`
+  ADD PRIMARY KEY (`id_chat`);
 
 --
 -- Indexes for table `darah`
@@ -92057,7 +92086,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `id_artikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_artikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `ayah`
@@ -92076,6 +92105,12 @@ ALTER TABLE `berkas`
 --
 ALTER TABLE `bidang`
   MODIFY `id_bidang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT for table `chat`
+--
+ALTER TABLE `chat`
+  MODIFY `id_chat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `darah`
