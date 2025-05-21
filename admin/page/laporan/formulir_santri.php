@@ -2,8 +2,8 @@
 $nama_dokumen = 'FORMULIR PENDAFTARAN SANTRI';
 define('_MPDF_PATH', 'mpdf/');
 include(_MPDF_PATH . "mpdf.php");
-$mpdf = new mPDF('utf-8', 'A4');
-ob_start();
+$mpdf = new mPDF('utf-8', array(210, 330));
+
 include "../../inc/koneksi.php";
 include "../../inc/tanggal.php"; 
 
@@ -12,6 +12,10 @@ $sql = $con->query("SELECT * FROM calon_santri NATURAL JOIN darah WHERE nisn='$n
 $row = mysqli_fetch_assoc($sql);
 $tgl = tgl_indo($row['tgl']);
 $tgl2 = tgl_indo($row['tgl_ijazah']);
+
+$sql_tes = $con->query("SELECT * FROM tes_masuk WHERE nisn='$nisn'");
+$row_tes = mysqli_fetch_assoc($sql_tes);
+ob_start();
 ?>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -275,6 +279,42 @@ $tgl2 = tgl_indo($row['tgl_ijazah']);
             <th align="left" style="font-size: 12px;">Penghasilan /Bulan</th>
             <td align="left" style="font-size: 12px;">:</td>
             <td align="left" style="font-size: 12px;"><?= number_format($row_ibu['penghasilan_ibu'], 0, ',','.') ?> /Bulan</td>
+        </tr>
+        <tr>
+            <th colspan="4" align="left" style="font-size: 12px;">&nbsp;</th> 
+        </tr>
+        <tr> 
+            <th colspan="4" align="left" style="font-size: 12px;"><u>Hasil Tes Masuk</u></th> 
+        </tr> 
+        <tr>
+            <th align="left" style="font-size: 12px;">31.</th>
+            <th align="left" style="font-size: 12px;">Nilai BTQ</th>
+            <td align="left" style="font-size: 12px;">:</td>
+            <td align="left" style="font-size: 12px;"><?= $row_tes['btq'] ?></td>
+        </tr>
+        <tr>
+            <th align="left" style="font-size: 12px;">32.</th>
+            <th align="left" style="font-size: 12px;">Pengetahuan Umum</th>
+            <td align="left" style="font-size: 12px;">:</td>
+            <td align="left" style="font-size: 12px;"><?= $row_tes['pengetahuan_umum'] ?></td>
+        </tr>
+        <tr>
+            <th align="left" style="font-size: 12px;">33.</th>
+            <th align="left" style="font-size: 12px;">Total Nilai</th>
+            <td align="left" style="font-size: 12px;">:</td>
+            <td align="left" style="font-size: 12px;"><?= $row_tes['total_nilai'] ?></td>
+        </tr>
+        <tr>
+            <th align="left" style="font-size: 12px;">34.</th>
+            <th align="left" style="font-size: 12px;">Grade</th>
+            <td align="left" style="font-size: 12px;">:</td>
+            <td align="left" style="font-size: 12px;"><?= $row_tes['grade'] ?></td>
+        </tr>
+        <tr>
+            <th align="left" style="font-size: 12px;">35.</th>
+            <th align="left" style="font-size: 12px;">Keterangan</th>
+            <td align="left" style="font-size: 12px;">:</td>
+            <td align="left" style="font-size: 12px;"><?= $row_tes['keterangan'] ?></td>
         </tr>
     </table> 
 

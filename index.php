@@ -180,7 +180,7 @@ include 'admin/inc/tanggal.php';
         </svg>
     </div>
     <!-- progress area end -->
-    <div style="position: fixed; bottom: 10px; right: 10px; width: 300px; background: #fff; border: 1px solid #ccc; padding: 10px; z-index: 9999;">
+   <!-- <div style="position: fixed; bottom: 10px; right: 10px; width: 300px; background: #fff; border: 1px solid #ccc; padding: 10px; z-index: 9999;">
     <h6>Live Chat</h6>
     <form id="chatForm">
         <input type="text" name="nama_user" placeholder="Nama Anda" class="form-control mb-2" required>
@@ -190,7 +190,7 @@ include 'admin/inc/tanggal.php';
     <div id="chatBox" style="height: 200px; overflow-y: scroll; border-top: 1px solid #ccc; margin-top: 10px; padding-top: 10px;"></div>
 </div>
                                
-    <script>
+   <script>
     const form = document.getElementById('chatForm');
     const chatBox = document.getElementById('chatBox');
 
@@ -220,9 +220,10 @@ include 'admin/inc/tanggal.php';
 
     setInterval(loadChat, 3000); // Update setiap 3 detik
     loadChat(); // Load awal
-</script>
+</script> -->
 
-
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="8bc22334-5946-465d-b73a-e321ededd00f";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+$crisp.push(["config", "position:reverse", true]);
     <!-- jquery js -->
     <script defer src="assets/js/plugins/jquery.min.js"></script>
     <script defer src="assets/js/plugins/bootstrap.min.js"></script>

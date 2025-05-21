@@ -96,6 +96,11 @@
                                 <span class="menu-text">Artikel</span>
                             </a>
                         </li>
+                        <li class="side-nav-item">
+                            <a href="?page=livechat" class="side-nav-link">
+                                <span class="menu-text">Livechat</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </li>
@@ -164,21 +169,7 @@
                     <span class="menu-text"> Tes Masuk </span> 
                 </a>
             </li>
-            
-            <li class="side-nav-item">
-                <a href="?page=livechat" class="side-nav-link">
-                    <span class="menu-icon"><i class="ti ti-message-circle"></i></span>
-                    <span class="menu-text"> Livechat </span> 
-                </a>
-            </li>
-
-            <li class="side-nav-item">
-                <a href="?page=pengaturan_gelombang" class="side-nav-link">
-                    <span class="menu-icon"><i class="ti ti-message-circle"></i></span>
-                    <span class="menu-text"> Pengaturan Gelombang </span> 
-                </a>
-            </li>
-
+    
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarLaporan" aria-expanded="false" aria-controls="sidebarLaporan"
                     class="side-nav-link">
